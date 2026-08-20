@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { CheckCircle2, Loader2 } from "lucide-react";
+import { CheckCircle, CircleNotch } from "@phosphor-icons/react";
 
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -42,7 +42,7 @@ export function ContactForm() {
         role="status"
         className="flex flex-col items-center gap-3 rounded-3xl border border-border bg-card p-10 text-center"
       >
-        <CheckCircle2 className="h-10 w-10 text-primary" aria-hidden="true" />
+        <CheckCircle className="h-10 w-10 text-primary" weight="duotone" aria-hidden="true" />
         <h3 className="text-xl text-primary">Thank you for reaching out</h3>
         <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
           We've received your message and someone from Dignified Diamonds will be in touch soon.
@@ -171,7 +171,9 @@ export function ContactForm() {
           disabled={form.formState.isSubmitting}
           className="h-auto w-full rounded-full bg-primary py-3.5 text-base font-semibold text-primary-foreground shadow-soft transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-primary hover:shadow-lift sm:w-auto sm:px-8"
         >
-          {form.formState.isSubmitting && <Loader2 className="h-4 w-4 animate-spin" />}
+          {form.formState.isSubmitting && (
+            <CircleNotch className="h-4 w-4 animate-spin" weight="bold" />
+          )}
           Send Message
         </Button>
       </form>

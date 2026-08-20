@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, X } from "lucide-react";
+import { List, X } from "@phosphor-icons/react";
 import { DiamondMark } from "./DiamondMark";
 import { NAV_LINKS } from "@/lib/site-data";
 
@@ -79,7 +79,7 @@ export function SiteNav() {
             className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border text-primary transition-transform duration-200 active:scale-90 md:hidden"
           >
             <span className="relative block h-5 w-5">
-              <Menu
+              <List
                 className={`absolute inset-0 h-5 w-5 transition-all duration-300 ease-out ${open ? "rotate-90 opacity-0" : "rotate-0 opacity-100"}`}
               />
               <X

@@ -43,7 +43,11 @@ function GetInvolvedPage() {
                   delay={i * 90}
                   className="flex flex-col rounded-3xl bg-gradient-warm p-7 ring-1 ring-champagne/60"
                 >
-                  <way.icon className="h-6 w-6 text-champagne-foreground" aria-hidden="true" />
+                  <way.icon
+                    className="h-6 w-6 text-champagne-foreground"
+                    weight="duotone"
+                    aria-hidden="true"
+                  />
                   <h2 className="mt-4 text-xl text-primary">{way.title}</h2>
                   <p className="mt-2.5 flex-1 text-sm leading-relaxed text-muted-foreground">
                     {way.body}

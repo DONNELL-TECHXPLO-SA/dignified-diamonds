@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { GraduationCap, Users } from "lucide-react";
+import { GraduationCap, UsersThree } from "@phosphor-icons/react";
 
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -71,7 +71,7 @@ function ImpactPage() {
             <div className="grid gap-6 lg:grid-cols-2">
               <Reveal className="rounded-3xl border border-border bg-card p-8 sm:p-10">
                 <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary text-primary">
-                  <GraduationCap className="h-5 w-5" aria-hidden="true" />
+                  <GraduationCap className="h-5 w-5" weight="duotone" aria-hidden="true" />
                 </span>
                 <h2 className="mt-5 text-2xl text-primary sm:text-3xl">
                   Supporting School Attendance
@@ -84,7 +84,7 @@ function ImpactPage() {
               </Reveal>
               <Reveal delay={100} className="rounded-3xl border border-border bg-card p-8 sm:p-10">
                 <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary text-primary">
-                  <Users className="h-5 w-5" aria-hidden="true" />
+                  <UsersThree className="h-5 w-5" weight="duotone" aria-hidden="true" />
                 </span>
                 <h2 className="mt-5 text-2xl text-primary sm:text-3xl">Community Involvement</h2>
                 <p className="mt-4 leading-relaxed text-muted-foreground">

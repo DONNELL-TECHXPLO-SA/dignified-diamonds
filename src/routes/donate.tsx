@@ -43,7 +43,7 @@ function DonatePage() {
                   className="flex flex-col rounded-3xl border border-border bg-card p-8 text-center"
                 >
                   <span className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary text-primary">
-                    <option.icon className="h-6 w-6" aria-hidden="true" />
+                    <option.icon className="h-6 w-6" weight="duotone" aria-hidden="true" />
                   </span>
                   <h2 className="mt-5 text-xl text-primary sm:text-2xl">{option.title}</h2>
                   <p className="mt-3 flex-1 leading-relaxed text-muted-foreground">{option.body}</p>

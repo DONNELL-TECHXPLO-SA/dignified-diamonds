@@ -147,7 +147,7 @@ function Index() {
                   className="group rounded-3xl border border-border bg-card p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-soft"
                 >
                   <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary text-primary transition-colors group-hover:bg-rose">
-                    <item.icon className="h-5 w-5" aria-hidden="true" />
+                    <item.icon className="h-5 w-5" weight="duotone" aria-hidden="true" />
                   </span>
                   <h3 className="mt-5 text-xl text-primary">{item.title}</h3>
                   <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">

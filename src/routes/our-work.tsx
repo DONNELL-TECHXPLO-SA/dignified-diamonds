@@ -44,7 +44,7 @@ function OurWorkPage() {
                   className="flex flex-col rounded-3xl border border-border bg-card p-8"
                 >
                   <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary text-primary">
-                    <program.icon className="h-5 w-5" aria-hidden="true" />
+                    <program.icon className="h-5 w-5" weight="duotone" aria-hidden="true" />
                   </span>
                   <h2 className="mt-5 text-xl text-primary sm:text-2xl">{program.title}</h2>
                   <p className="mt-3 flex-1 leading-relaxed text-muted-foreground">

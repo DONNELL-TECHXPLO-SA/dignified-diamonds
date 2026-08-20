@@ -1,20 +1,20 @@
 import {
   Package,
-  School,
-  Users,
+  Student,
+  UsersThree,
   Handshake,
   Gift,
-  HeartHandshake,
-  Boxes,
-  Building2,
+  HandHeart,
+  Archive,
+  Buildings,
   Recycle,
-  CircleDollarSign,
+  CurrencyCircleDollar,
   ShieldCheck,
   FileText,
-  Landmark,
-  ScrollText,
+  Bank,
+  Scroll,
   HandCoins,
-} from "lucide-react";
+} from "@phosphor-icons/react";
 
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
@@ -50,7 +50,7 @@ export const OUR_WORK_PROGRAMS = [
     body: "At the heart of our work are hygiene care packs — practical, dignified support that gives girls the products they need to get through school and everyday life without stress or shame.",
   },
   {
-    icon: School,
+    icon: Student,
     title: "School Support",
     body: "We work with schools to make menstrual hygiene products more accessible to learners, so a lack of supplies never has to stand between a girl and her classroom.",
     cta: "Partner With a School",
@@ -64,7 +64,7 @@ export const OUR_WORK_PROGRAMS = [
     ctaHref: "/get-involved",
   },
   {
-    icon: Building2,
+    icon: Buildings,
     title: "Corporate & Community Partnerships",
     body: "Companies and community organisations support our work through product donations, sponsorship, collection drives, financial contributions and employee volunteering.",
     cta: "Become a Partner",
@@ -79,12 +79,12 @@ export const HOME_WORK_PREVIEW = [
     body: "Providing essential menstrual hygiene products and care packs to girls who need support.",
   },
   {
-    icon: School,
+    icon: Student,
     title: "School Support",
     body: "Helping schools support learners experiencing difficulty accessing menstrual hygiene products.",
   },
   {
-    icon: Users,
+    icon: UsersThree,
     title: "Community Action",
     body: "Bringing people, businesses and communities together through donations, collection drives and partnerships.",
   },
@@ -103,7 +103,7 @@ export const IMPACT_STORIES: Array<{ quote: string; name: string; role: string }
 
 export const GET_INVOLVED_WAYS = [
   {
-    icon: HeartHandshake,
+    icon: HandHeart,
     title: "Donate Products",
     body: "Contribute sanitary products and hygiene items directly to our care packs.",
     cta: "Donate Products",
@@ -124,14 +124,14 @@ export const GET_INVOLVED_WAYS = [
     ctaHref: "/contact",
   },
   {
-    icon: Users,
+    icon: UsersThree,
     title: "Volunteer",
     body: "Give your time and skills to help pack, distribute and support our community initiatives.",
     cta: "Volunteer With Us",
     ctaHref: "/contact",
   },
   {
-    icon: Boxes,
+    icon: Archive,
     title: "Start a Collection Drive",
     body: "Organise a collection drive at your school, office, business, community centre or event.",
     cta: "Start a Drive",
@@ -147,13 +147,13 @@ export const DONATE_OPTIONS = [
     cta: "Donate Products",
   },
   {
-    icon: CircleDollarSign,
+    icon: CurrencyCircleDollar,
     title: "Make a Financial Contribution",
     body: "Financial contributions help us purchase and distribute essential hygiene products where they're needed most. Online payment is coming soon — for now, reach out via our enquiry form.",
     cta: "Donate Now",
   },
   {
-    icon: Building2,
+    icon: Buildings,
     title: "Corporate Sponsorship",
     body: "Support Dignified Diamonds through a larger sponsorship or ongoing partnership as a business or organisation.",
     cta: "Enquire About Sponsorship",
@@ -161,10 +161,10 @@ export const DONATE_OPTIONS = [
 ] as const;
 
 export const TRUST_ITEMS = [
-  { icon: Landmark, label: "Registration Information" },
+  { icon: Bank, label: "Registration Information" },
   { icon: FileText, label: "Annual Reports" },
-  { icon: ScrollText, label: "Impact Reports" },
-  { icon: CircleDollarSign, label: "Financial Information" },
+  { icon: Scroll, label: "Impact Reports" },
+  { icon: CurrencyCircleDollar, label: "Financial Information" },
   { icon: Handshake, label: "Partner Information" },
   { icon: ShieldCheck, label: "Policies" },
 ] as const;
