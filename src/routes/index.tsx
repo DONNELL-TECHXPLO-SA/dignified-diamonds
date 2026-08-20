@@ -1,9 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { HeartHandshake, Package, School, Users, Handshake, Gift } from "lucide-react";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { SiteNav } from "@/components/SiteNav";
+import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
 import { DiamondMark } from "@/components/DiamondMark";
+import { HOME_WORK_PREVIEW } from "@/lib/site-data";
 import heroImage from "@/assets/hero.jpg";
 import storyImage from "@/assets/story.jpg";
 
@@ -39,60 +40,18 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const work = [
-  {
-    icon: Package,
-    title: "Hygiene Care Packs",
-    body: "Providing essential menstrual hygiene products and care packs to girls who need support.",
-  },
-  {
-    icon: School,
-    title: "School Support",
-    body: "Helping schools support learners experiencing difficulty accessing menstrual hygiene products.",
-  },
-  {
-    icon: Users,
-    title: "Community Action",
-    body: "Bringing people, businesses and communities together through donations, collection drives and partnerships.",
-  },
-];
-
-const involve = [
-  {
-    icon: HeartHandshake,
-    title: "Donate",
-    body: "Help provide essential menstrual hygiene products.",
-    cta: "Donate",
-  },
-  {
-    icon: Handshake,
-    title: "Partner With Us",
-    body: "Businesses and organisations can help us reach more girls and communities.",
-    cta: "Become a Partner",
-  },
-  {
-    icon: Gift,
-    title: "Get Involved",
-    body: "Donate products, organise a collection drive or volunteer your time and skills.",
-    cta: "Get Involved",
-  },
-];
-
 function Index() {
   return (
     <div id="top" className="min-h-screen bg-background">
       <SiteNav />
 
-      <main>
+      <main id="main-content">
         {/* HERO */}
-        <section className="relative overflow-hidden bg-gradient-warm pt-28 pb-16 sm:pt-36 sm:pb-24">
+        <section className="relative flex min-h-screen items-center overflow-hidden bg-gradient-warm pt-28 pb-16 sm:pt-36 sm:pb-24">
           <DiamondMark className="pointer-events-none absolute -top-10 -right-12 h-64 w-64 text-champagne opacity-40 sm:h-80 sm:w-80" />
-          <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 sm:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
+          <div className="mx-auto grid w-full max-w-6xl items-center gap-10 px-5 sm:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
             <Reveal>
-              <span className="inline-flex items-center gap-2 rounded-full border border-champagne bg-card/70 px-4 py-1.5 text-xs font-semibold tracking-widest text-champagne-foreground uppercase">
-                Youth-led · South Africa
-              </span>
-              <h1 className="mt-6 text-4xl leading-[1.05] text-primary sm:text-5xl lg:text-6xl">
+              <h1 className="text-4xl leading-[1.05] text-primary sm:text-5xl lg:text-6xl">
                 Restoring Dignity.
                 <br />
                 Empowering Girls.
@@ -102,18 +61,18 @@ function Index() {
                 they can continue learning, participating and living their lives with confidence.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href="#get-involved"
-                  className="inline-flex items-center justify-center rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-lift"
+                <Link
+                  to="/donate"
+                  className="inline-flex items-center justify-center rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-soft transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lift"
                 >
                   Donate
-                </a>
-                <a
-                  href="#get-involved"
-                  className="inline-flex items-center justify-center rounded-full border border-primary/25 bg-card px-7 py-3.5 text-base font-semibold text-primary transition-all hover:-translate-y-0.5 hover:bg-secondary"
+                </Link>
+                <Link
+                  to="/get-involved"
+                  className="inline-flex items-center justify-center rounded-full border border-primary/25 bg-card px-7 py-3.5 text-base font-semibold text-primary transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-secondary"
                 >
                   Get Involved
-                </a>
+                </Link>
               </div>
             </Reveal>
 
@@ -160,6 +119,12 @@ function Index() {
                 <DiamondMark className="h-8 w-8 shrink-0 text-champagne-foreground" />
                 <p className="font-display text-xl text-primary">Every girl deserves dignity.</p>
               </blockquote>
+              <Link
+                to="/about"
+                className="mt-6 inline-flex items-center text-sm font-semibold text-primary underline-offset-4 hover:underline"
+              >
+                Read our full story →
+              </Link>
             </Reveal>
           </div>
         </section>
@@ -175,7 +140,7 @@ function Index() {
               </p>
             </Reveal>
             <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {work.map((item, i) => (
+              {HOME_WORK_PREVIEW.map((item, i) => (
                 <Reveal
                   as="li"
                   key={item.title}
@@ -192,6 +157,12 @@ function Index() {
                 </Reveal>
               ))}
             </ul>
+            <Link
+              to="/our-work"
+              className="mt-10 inline-flex items-center text-sm font-semibold text-primary underline-offset-4 hover:underline"
+            >
+              See all of our work →
+            </Link>
           </div>
         </section>
 
@@ -206,26 +177,53 @@ function Index() {
               </p>
             </Reveal>
             <ul className="mt-12 grid gap-6 lg:grid-cols-3">
-              {involve.map((item, i) => (
-                <Reveal
-                  as="li"
-                  key={item.title}
-                  delay={i * 110}
-                  className="flex flex-col rounded-3xl bg-gradient-warm p-7 ring-1 ring-champagne/60"
+              <Reveal
+                as="li"
+                className="flex flex-col rounded-3xl bg-gradient-warm p-7 ring-1 ring-champagne/60"
+              >
+                <h3 className="text-xl text-primary">Donate</h3>
+                <p className="mt-2.5 flex-1 text-sm leading-relaxed text-muted-foreground">
+                  Help provide essential menstrual hygiene products.
+                </p>
+                <Link
+                  to="/donate"
+                  className="mt-6 inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-soft"
                 >
-                  <item.icon className="h-6 w-6 text-champagne-foreground" aria-hidden="true" />
-                  <h3 className="mt-4 text-xl text-primary">{item.title}</h3>
-                  <p className="mt-2.5 flex-1 text-sm leading-relaxed text-muted-foreground">
-                    {item.body}
-                  </p>
-                  <a
-                    href="#contact"
-                    className="mt-6 inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:-translate-y-0.5 hover:shadow-soft"
-                  >
-                    {item.cta}
-                  </a>
-                </Reveal>
-              ))}
+                  Donate
+                </Link>
+              </Reveal>
+              <Reveal
+                as="li"
+                delay={110}
+                className="flex flex-col rounded-3xl bg-gradient-warm p-7 ring-1 ring-champagne/60"
+              >
+                <h3 className="text-xl text-primary">Partner With Us</h3>
+                <p className="mt-2.5 flex-1 text-sm leading-relaxed text-muted-foreground">
+                  Businesses and organisations can help us reach more girls and communities.
+                </p>
+                <Link
+                  to="/contact"
+                  className="mt-6 inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-soft"
+                >
+                  Become a Partner
+                </Link>
+              </Reveal>
+              <Reveal
+                as="li"
+                delay={220}
+                className="flex flex-col rounded-3xl bg-gradient-warm p-7 ring-1 ring-champagne/60"
+              >
+                <h3 className="text-xl text-primary">Get Involved</h3>
+                <p className="mt-2.5 flex-1 text-sm leading-relaxed text-muted-foreground">
+                  Donate products, organise a collection drive or volunteer your time and skills.
+                </p>
+                <Link
+                  to="/get-involved"
+                  className="mt-6 inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-soft"
+                >
+                  Get Involved
+                </Link>
+              </Reveal>
             </ul>
           </div>
         </section>
@@ -242,54 +240,17 @@ function Index() {
               A small contribution can help remove a major barrier from a young girl&apos;s
               education and everyday life.
             </p>
-            <a
-              href="#contact"
-              className="mt-9 inline-flex items-center justify-center rounded-full bg-champagne px-8 py-4 text-base font-semibold text-champagne-foreground transition-all hover:-translate-y-0.5 hover:shadow-lift"
+            <Link
+              to="/donate"
+              className="mt-9 inline-flex items-center justify-center rounded-full bg-champagne px-8 py-4 text-base font-semibold text-champagne-foreground transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lift"
             >
               Support Dignified Diamonds
-            </a>
+            </Link>
           </Reveal>
         </section>
       </main>
 
-      {/* FOOTER */}
-      <footer id="contact" className="bg-cream py-14">
-        <div className="mx-auto max-w-6xl px-5 sm:px-8">
-          <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-            <div>
-              <div className="flex items-center gap-2.5 text-primary">
-                <DiamondMark className="h-7 w-7 text-champagne-foreground" />
-                <span className="font-display text-lg font-semibold">Dignified Diamonds</span>
-              </div>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Restoring Dignity. Empowering Girls.
-              </p>
-            </div>
-            <nav aria-label="Footer">
-              <ul className="flex flex-wrap gap-x-8 gap-y-3">
-                {[
-                  { label: "About", href: "#about" },
-                  { label: "What We Do", href: "#what-we-do" },
-                  { label: "Get Involved", href: "#get-involved" },
-                  { label: "Contact", href: "#contact" },
-                ].map((l) => (
-                  <li key={l.href}>
-                    <a
-                      href={l.href}
-                      className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-                    >
-                      {l.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </div>
-          <p className="mt-10 border-t border-border pt-6 text-xs text-muted-foreground">
-            © 2026 Dignified Diamonds. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
