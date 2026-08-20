@@ -1,420 +1,65 @@
-# Dignified Diamonds Spark
+# Dignified Diamonds
 
-Build a Basic Website for Dignified Diamonds
+The official website for **Dignified Diamonds**, a South African youth-led initiative founded in 2020 by Ayesha Cassim, focused on helping girls access essential menstrual hygiene products.
 
-Create a modern, beautiful, responsive one-page website for Dignified Diamonds, a South African youth-led charitable initiative focused on menstrual hygiene and helping girls access essential sanitary products.
+Live tagline: *Restoring Dignity. Empowering Girls.*
 
-The website must be short and simple for the first version. Do not create a large multi-page NGO website. The goal is to establish a strong, professional online presence that clearly communicates who Dignified Diamonds is, what they do, and how people can support them.
+## Tech Stack
 
-Brand & Visual Direction
+- [TanStack Start](https://tanstack.com/start) (React 19, file-based routing via TanStack Router)
+- [Tailwind CSS v4](https://tailwindcss.com) with a custom design system (see `src/styles.css`)
+- [Radix UI](https://www.radix-ui.com) primitives via shadcn-style components in `src/components/ui`
+- [React Hook Form](https://react-hook-form.com) + [Zod](https://zod.dev) for form validation
+- [Bun](https://bun.sh) as the package manager and dev runtime
+- Deployed via [Nitro](https://nitro.build) (Cloudflare Workers preset)
 
-The design should feel:
-
-Warm
-
-Modern
-
-Elegant
-
-Empowering
-
-Youth-focused
-
-Trustworthy
-
-Human
-
-Professional
-
-Avoid making the website look like a generic corporate NGO template.
-
-Use a refined feminine-inspired colour palette:
-
-Deep plum/burgundy as a primary colour
-
-Soft rose/pink as an accent
-
-Warm cream/ivory for backgrounds
-
-Subtle champagne/gold accents to connect with the "Diamonds" name
-
-Charcoal/dark text
-
-Use generous whitespace, elegant typography, rounded elements where appropriate, subtle animations and high-quality imagery.
-
-The website must feel hopeful and empowering rather than focused on poverty or desperation.
-
-Do not use stereotypical or overly dramatic charity imagery.
-
-Use imagery showing confident young women, girls at school, education, community support, volunteers and hygiene-care initiatives.
-
-WEBSITE STRUCTURE
-
-Build the entire website as a single scrolling page with the following sections:
-
-Navigation
-
-Hero
-
-About / Our Story
-
-What We Do
-
-Get Involved
-
-Final CTA
-
-Footer
-
-Keep every section concise.
-
-1. NAVIGATION
-
-Create a clean sticky navigation bar.
-
-Logo/text:
-
-Dignified Diamonds
-
-Navigation links:
-
-About
-
-What We Do
-
-Get Involved
-
-Contact
-
-Primary button:
-
-Donate
-
-On mobile, use a clean hamburger menu.
-
-The navigation should become slightly more compact when scrolling.
-
-2. HERO SECTION
-
-Create a visually striking hero section.
-
-Main headline:
-
-Restoring Dignity. Empowering Girls.
-
-Supporting text:
-
-Dignified Diamonds helps young girls access essential menstrual hygiene products so they can continue learning, participating and living their lives with confidence.
-
-Buttons:
-
-Donate
-
-Get Involved
-
-Use a large, high-quality image of confident young women/girls in a positive school or community environment.
-
-The hero should immediately communicate that this is a youth empowerment and menstrual hygiene initiative.
-
-Add a subtle decorative diamond-inspired visual element, but keep it sophisticated and minimal.
-
-3. ABOUT / OUR STORY
-
-Section heading:
-
-Our Story
-
-Text:
-
-Dignified Diamonds was founded in 2020 by Ayesha Cassim while she was a Grade 11 learner at Hoërskool Lydenburg. What began as a desire to support girls who struggled to access female hygiene products grew into a wider community initiative supporting girls with essential menstrual hygiene products and care packs.
-
-Second short paragraph:
-
-Our work is built around a simple belief: no girl should have to compromise her education, confidence or everyday life because she cannot access essential menstrual hygiene products.
-
-Add a small founder/organisation image if an appropriate image is available.
-
-Keep this section compact.
-
-Include a small highlighted statement:
-
-Every girl deserves dignity.
-
-4. WHAT WE DO
-
-Heading:
-
-What We Do
-
-Supporting text:
-
-We work with communities, schools, businesses and individuals to help girls access the menstrual hygiene products they need.
-
-Create three clean cards:
-
-Hygiene Care Packs
-
-Providing essential menstrual hygiene products and care packs to girls who need support.
-
-School Support
-
-Helping schools support learners experiencing difficulty accessing menstrual hygiene products.
-
-Community Action
-
-Bringing people, businesses and communities together through donations, collection drives and partnerships.
-
-Each card should have a simple modern icon.
-
-Do not make these cards excessively large.
-
-5. GET INVOLVED
-
-Heading:
-
-You Can Make a Difference
-
-Short text:
-
-Your support can help a girl stay in school, participate in everyday life and face every month with confidence and dignity.
-
-Create three simple options:
-
-Donate
-
-Help provide essential menstrual hygiene products.
-
-Button:
-
-Donate
-
-Partner With Us
-
-Businesses and organisations can help us reach more girls and communities.
-
-Button:
-
-Become a Partner
-
-Get Involved
-
-Donate products, organise a collection drive or volunteer your time and skills.
-
-Button:
-
-Get Involved
-
-Make this section visually engaging but concise.
-
-6. FINAL CTA
-
-Create a strong full-width CTA section.
-
-Headline:
-
-Together, We Can Restore Dignity.
-
-Text:
-
-A small contribution can help remove a major barrier from a young girl's education and everyday life.
-
-Button:
-
-Support Dignified Diamonds
-
-Use a warm, uplifting background with subtle diamond/abstract visual elements.
-
-7. FOOTER
-
-Keep the footer simple.
-
-Display:
-
-Dignified Diamonds
-
-Restoring Dignity. Empowering Girls.
-
-Footer links:
-
-About
-
-What We Do
-
-Get Involved
-
-Contact
-
-Include social media icons if official social accounts are later supplied.
-
-Contact information should only be displayed if verified.
-
-Do not invent banking details, registration numbers, addresses, social media accounts or other organisational information.
-
-Add:
-
-© 2026 Dignified Diamonds. All rights reserved.
-
-IMPORTANT DESIGN REQUIREMENTS
-
-Keep It Short
-
-This is the most important requirement.
-
-Do not create:
-
-A large multi-page website
-
-A lengthy About page
-
-A blog
-
-A news section
-
-Complicated dashboards
-
-Excessive statistics
-
-Large blocks of text
-
-This is the initial/basic website version.
-
-The page should be possible to understand within approximately 30–60 seconds.
-
-Responsive Design
-
-The website must be fully responsive across:
-
-Desktop
-
-Laptop
-
-Tablet
-
-Mobile
-
-Pay particular attention to mobile spacing, typography and button sizes.
-
-Animations
-
-Use subtle premium animations:
-
-Fade/slide-up animations as sections enter the viewport
-
-Gentle hover effects
-
-Smooth scrolling
-
-Subtle image movement/parallax where appropriate
-
-Button hover states
-
-Do not over-animate the website.
-
-The animation style should feel premium and calm, not flashy.
-
-Typography
-
-Use a modern, elegant font pairing.
-
-The typography should feel:
-
-Elegant + approachable + contemporary.
-
-Large bold headlines should provide strong visual hierarchy.
-
-Avoid overly decorative fonts that reduce readability.
-
-Imagery
-
-Use high-quality imagery throughout the website.
-
-Prioritise imagery that communicates:
-
-Confidence
-
-Education
-
-Youth
-
-Community
-
-Hope
-
-Empowerment
-
-Support
-
-Avoid imagery that depicts beneficiaries as helpless or overly distressed.
-
-If suitable Dignified Diamonds photography is unavailable, use tasteful temporary imagery that can easily be replaced later.
-
-CONTENT ACCURACY
-
-Use the following verified organisational information:
-
-Organisation: Dignified Diamonds
-
-Founder: Ayesha Cassim
-
-Founded: 2020
-
-Core focus: Menstrual hygiene and supporting girls who lack reliable access to sanitary products.
-
-Origin: Founded while Ayesha Cassim was a Grade 11 learner at Hoërskool Lydenburg.
-
-Work: Providing female hygiene products/care packs and supporting schools and communities.
-
-Core belief: No girl should have to compromise her education, confidence or everyday life because she cannot access menstrual hygiene products.
-
-Do not invent statistics, awards, partnerships, registration numbers, financial information, testimonials or contact details.
-
-If information is unavailable, design the UI so that it can easily be added later.
-
-TECHNICAL REQUIREMENTS
-
-Build a polished production-quality frontend.
-
-Requirements:
-
-Responsive design
-
-Fast loading
-
-Accessible semantic HTML
-
-SEO-friendly structure
-
-Mobile-first implementation
-
-Smooth scrolling
-
-Proper hover/focus states
-
-Optimised images
-
-Clean component structure
-
-Reusable components
-
-No unnecessary complexity
-
-Add appropriate SEO metadata:
-
-Title: Dignified Diamonds | Restoring Dignity. Empowering Girls.
-
-Description: Dignified Diamonds helps young girls access essential menstrual hygiene products so they can continue learning, participating and living their lives with confidence and dignity.
-
-Make the design feel like a real established social-impact organisation, even though this is intentionally a simple first version.
-
-The final result should be minimal, premium, emotional and empowering — not corporate, cluttered or overly long.
-
-## Development
+## Getting Started
 
 You need [Bun](https://bun.sh) installed.
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
+git clone https://github.com/DONNELL-TECHXPLO-SA/dignified-diamonds.git
+cd dignified-diamonds
 bun install
 bun run dev
 ```
+
+The site runs at `http://localhost:8080`.
+
+### Scripts
+
+| Command           | Description                              |
+| ------------------ | ----------------------------------------- |
+| `bun run dev`      | Start the dev server with hot reload      |
+| `bun run build`    | Production build (client, SSR, Nitro)     |
+| `bun run preview`  | Preview a production build locally        |
+| `bun run lint`     | Run ESLint                                |
+| `bun run format`   | Format the codebase with Prettier         |
+
+## Site Structure
+
+Pages live in `src/routes/` (one file per route, powered by TanStack Router's file-based routing):
+
+| Route            | File                        | Purpose                                   |
+| ----------------- | --------------------------- | ------------------------------------------ |
+| `/`               | `routes/index.tsx`          | Home — introduction and highlights         |
+| `/about`          | `routes/about.tsx`          | Origin story, founder, mission & vision    |
+| `/our-work`       | `routes/our-work.tsx`       | Programmes: care packs, schools, drives    |
+| `/impact`         | `routes/impact.tsx`         | Impact statistics and stories              |
+| `/get-involved`   | `routes/get-involved.tsx`   | Ways to donate, volunteer or partner       |
+| `/donate`         | `routes/donate.tsx`         | Donation options overview                  |
+| `/contact`        | `routes/contact.tsx`        | Contact form                               |
+
+Shared layout pieces (`SiteNav`, `SiteFooter`, `PageHero`, `FAQSection`, etc.) live in `src/components/`.
+
+### Updating content
+
+Most editable copy — navigation links, FAQs, impact stats, programmes, ways to get involved, social links and contact details — is centralised in **`src/lib/site-data.ts`**. Update values there rather than hunting through individual pages.
+
+Impact statistics and impact stories are intentionally left as `[NUMBER]` placeholders / empty arrays until Dignified Diamonds supplies verified figures and approved testimonials — do not fill these with invented numbers.
+
+The contact form (`src/components/ContactForm.tsx`) validates and submits via `submitContactForm` in `src/lib/contact-form.ts`, which is the single seam to wire up to a real email/CRM backend when one is ready.
+
+## Design System
+
+The visual language (colours, typography, spacing, motion) is defined in `src/styles.css` using Tailwind v4's `@theme` and CSS custom properties — a warm plum/rose/champagne palette with Fraunces (display) and Manrope (body) typefaces. New pages and components should reuse these tokens rather than introducing new colours or fonts.
