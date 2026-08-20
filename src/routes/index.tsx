@@ -5,24 +5,20 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
 import { DiamondMark } from "@/components/DiamondMark";
 import { HOME_WORK_PREVIEW } from "@/lib/site-data";
+import { SITE_URL, OG_IMAGE, pageMeta, pageLinks } from "@/lib/seo";
 import heroImage from "@/assets/hero.jpg";
 import storyImage from "@/assets/story.jpg";
 
+const PATH = "/";
 const TITLE = "Dignified Diamonds | Restoring Dignity. Empowering Girls.";
 const DESCRIPTION =
-  "Dignified Diamonds helps young girls access essential menstrual hygiene products so they can continue learning, participating and living their lives with confidence and dignity.";
+  "Dignified Diamonds helps young girls access essential menstrual hygiene products so they can learn, participate and live with confidence and dignity.";
 
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-      { property: "og:url", content: "/" },
-    ],
-    links: [{ rel: "canonical", href: "/" }],
+    meta: pageMeta({ title: TITLE, description: DESCRIPTION, path: PATH }),
+    links: pageLinks(PATH),
     scripts: [
       {
         type: "application/ld+json",
@@ -30,6 +26,8 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "NGO",
           name: "Dignified Diamonds",
+          url: SITE_URL,
+          image: OG_IMAGE.url,
           slogan: "Restoring Dignity. Empowering Girls.",
           foundingDate: "2020",
           founder: { "@type": "Person", name: "Ayesha Cassim" },
@@ -82,6 +80,7 @@ function Index() {
                 src={heroImage}
                 width={1600}
                 height={1200}
+                fetchPriority="high"
                 alt="Confident young South African schoolgirls smiling together on their school grounds"
                 className="relative w-full rounded-[2rem] object-cover shadow-lift"
               />

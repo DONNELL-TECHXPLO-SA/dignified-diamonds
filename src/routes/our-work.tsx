@@ -6,22 +6,19 @@ import { Reveal } from "@/components/Reveal";
 import { PageHero } from "@/components/PageHero";
 import { FAQSection } from "@/components/FAQSection";
 import { OUR_WORK_PROGRAMS } from "@/lib/site-data";
+import { pageMeta, pageLinks, breadcrumbSchema } from "@/lib/seo";
 
-const TITLE = "Our Work | Dignified Diamonds";
+const PATH = "/our-work";
+const TITLE = "Our Work & Programmes | Dignified Diamonds";
 const DESCRIPTION =
-  "From hygiene care packs to school support and community initiatives, Dignified Diamonds works to make menstrual hygiene products more accessible to girls who need them.";
+  "From hygiene care packs to school support and community initiatives, Dignified Diamonds makes menstrual hygiene products more accessible to girls who need them.";
 
 export const Route = createFileRoute("/our-work")({
   component: OurWorkPage,
   head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-      { property: "og:url", content: "/our-work" },
-    ],
-    links: [{ rel: "canonical", href: "/our-work" }],
+    meta: pageMeta({ title: TITLE, description: DESCRIPTION, path: PATH }),
+    links: pageLinks(PATH),
+    scripts: [breadcrumbSchema("Our Work", PATH)],
   }),
 });
 

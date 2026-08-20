@@ -2,7 +2,7 @@
 
 The official website for **Dignified Diamonds**, a South African youth-led initiative founded in 2020 by Ayesha Cassim, focused on helping girls access essential menstrual hygiene products.
 
-Live tagline: *Restoring Dignity. Empowering Girls.*
+Live tagline: _Restoring Dignity. Empowering Girls._
 
 ## Tech Stack
 
@@ -28,27 +28,27 @@ The site runs at `http://localhost:8080`.
 
 ### Scripts
 
-| Command           | Description                              |
-| ------------------ | ----------------------------------------- |
-| `bun run dev`      | Start the dev server with hot reload      |
-| `bun run build`    | Production build (client, SSR, Nitro)     |
-| `bun run preview`  | Preview a production build locally        |
-| `bun run lint`     | Run ESLint                                |
-| `bun run format`   | Format the codebase with Prettier         |
+| Command           | Description                           |
+| ----------------- | ------------------------------------- |
+| `bun run dev`     | Start the dev server with hot reload  |
+| `bun run build`   | Production build (client, SSR, Nitro) |
+| `bun run preview` | Preview a production build locally    |
+| `bun run lint`    | Run ESLint                            |
+| `bun run format`  | Format the codebase with Prettier     |
 
 ## Site Structure
 
 Pages live in `src/routes/` (one file per route, powered by TanStack Router's file-based routing):
 
-| Route            | File                        | Purpose                                   |
-| ----------------- | --------------------------- | ------------------------------------------ |
-| `/`               | `routes/index.tsx`          | Home — introduction and highlights         |
-| `/about`          | `routes/about.tsx`          | Origin story, founder, mission & vision    |
-| `/our-work`       | `routes/our-work.tsx`       | Programmes: care packs, schools, drives    |
-| `/impact`         | `routes/impact.tsx`         | Impact statistics and stories              |
-| `/get-involved`   | `routes/get-involved.tsx`   | Ways to donate, volunteer or partner       |
-| `/donate`         | `routes/donate.tsx`         | Donation options overview                  |
-| `/contact`        | `routes/contact.tsx`        | Contact form                               |
+| Route           | File                      | Purpose                                 |
+| --------------- | ------------------------- | --------------------------------------- |
+| `/`             | `routes/index.tsx`        | Home — introduction and highlights      |
+| `/about`        | `routes/about.tsx`        | Origin story, founder, mission & vision |
+| `/our-work`     | `routes/our-work.tsx`     | Programmes: care packs, schools, drives |
+| `/impact`       | `routes/impact.tsx`       | Impact statistics and stories           |
+| `/get-involved` | `routes/get-involved.tsx` | Ways to donate, volunteer or partner    |
+| `/donate`       | `routes/donate.tsx`       | Donation options overview               |
+| `/contact`      | `routes/contact.tsx`      | Contact form                            |
 
 Shared layout pieces (`SiteNav`, `SiteFooter`, `PageHero`, `FAQSection`, etc.) live in `src/components/`.
 

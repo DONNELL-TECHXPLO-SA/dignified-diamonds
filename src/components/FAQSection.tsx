@@ -1,10 +1,17 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./ui/accordion";
 import { Reveal } from "./Reveal";
 import { FAQS } from "@/lib/site-data";
+import { faqSchema } from "@/lib/seo";
 
+// Structured data is generated directly from FAQS below so it can never
+// drift out of sync with the questions/answers actually rendered on screen.
 export function FAQSection() {
   return (
     <section aria-labelledby="faq-heading" className="py-20 sm:py-28">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(FAQS)) }}
+      />
       <div className="mx-auto max-w-3xl px-5 sm:px-8">
         <Reveal className="text-center">
           <h2 id="faq-heading" className="text-3xl text-primary sm:text-4xl">

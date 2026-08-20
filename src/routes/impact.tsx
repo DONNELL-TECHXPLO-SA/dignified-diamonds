@@ -7,22 +7,19 @@ import { Reveal } from "@/components/Reveal";
 import { PageHero } from "@/components/PageHero";
 import { ImpactStats } from "@/components/ImpactStats";
 import { ImpactStories } from "@/components/ImpactStories";
+import { pageMeta, pageLinks, breadcrumbSchema } from "@/lib/seo";
 
-const TITLE = "Our Impact | Dignified Diamonds";
+const PATH = "/impact";
+const TITLE = "Our Impact & Reach | Dignified Diamonds";
 const DESCRIPTION =
-  "It represents a girl who can continue learning, participating and living her life with greater confidence and dignity.";
+  "See how Dignified Diamonds' hygiene care packs help girls continue learning, participating and living everyday life with confidence and dignity.";
 
 export const Route = createFileRoute("/impact")({
   component: ImpactPage,
   head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-      { property: "og:url", content: "/impact" },
-    ],
-    links: [{ rel: "canonical", href: "/impact" }],
+    meta: pageMeta({ title: TITLE, description: DESCRIPTION, path: PATH }),
+    links: pageLinks(PATH),
+    scripts: [breadcrumbSchema("Impact", PATH)],
   }),
 });
 

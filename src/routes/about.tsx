@@ -7,22 +7,19 @@ import { PageHero } from "@/components/PageHero";
 import { DiamondMark } from "@/components/DiamondMark";
 import { FounderPortrait } from "@/components/FounderPortrait";
 import { TrustSection } from "@/components/TrustSection";
+import { pageMeta, pageLinks, breadcrumbSchema } from "@/lib/seo";
 
+const PATH = "/about";
 const TITLE = "About Dignified Diamonds | Our Story & Mission";
 const DESCRIPTION =
-  "Dignified Diamonds began with one young person's desire to make a difference and has grown into a community-focused initiative supporting girls with access to essential menstrual hygiene products.";
+  "Dignified Diamonds began as one young person's desire to help and has grown into a community initiative supporting girls' access to menstrual hygiene products.";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
   head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-      { property: "og:url", content: "/about" },
-    ],
-    links: [{ rel: "canonical", href: "/about" }],
+    meta: pageMeta({ title: TITLE, description: DESCRIPTION, path: PATH }),
+    links: pageLinks(PATH),
+    scripts: [breadcrumbSchema("About", PATH)],
   }),
 });
 

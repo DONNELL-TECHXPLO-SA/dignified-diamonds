@@ -4,22 +4,19 @@ import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
 import { ContactForm } from "@/components/ContactForm";
+import { pageMeta, pageLinks, breadcrumbSchema } from "@/lib/seo";
 
-const TITLE = "Contact Dignified Diamonds";
+const PATH = "/contact";
+const TITLE = "Contact Dignified Diamonds | Donate, Partner or Volunteer";
 const DESCRIPTION =
   "Have a question, want to donate, or interested in partnering with Dignified Diamonds? We'd love to hear from you.";
 
 export const Route = createFileRoute("/contact")({
   component: ContactPage,
   head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-      { property: "og:url", content: "/contact" },
-    ],
-    links: [{ rel: "canonical", href: "/contact" }],
+    meta: pageMeta({ title: TITLE, description: DESCRIPTION, path: PATH }),
+    links: pageLinks(PATH),
+    scripts: [breadcrumbSchema("Contact", PATH)],
   }),
 });
 

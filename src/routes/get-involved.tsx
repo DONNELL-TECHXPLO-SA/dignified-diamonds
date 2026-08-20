@@ -6,7 +6,9 @@ import { Reveal } from "@/components/Reveal";
 import { PageHero } from "@/components/PageHero";
 import { FAQSection } from "@/components/FAQSection";
 import { GET_INVOLVED_WAYS } from "@/lib/site-data";
+import { pageMeta, pageLinks, breadcrumbSchema } from "@/lib/seo";
 
+const PATH = "/get-involved";
 const TITLE = "Get Involved | Support Dignified Diamonds";
 const DESCRIPTION =
   "Whether you donate products, volunteer your time or partner with us, your support can help restore dignity to girls who need it.";
@@ -14,14 +16,9 @@ const DESCRIPTION =
 export const Route = createFileRoute("/get-involved")({
   component: GetInvolvedPage,
   head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-      { property: "og:url", content: "/get-involved" },
-    ],
-    links: [{ rel: "canonical", href: "/get-involved" }],
+    meta: pageMeta({ title: TITLE, description: DESCRIPTION, path: PATH }),
+    links: pageLinks(PATH),
+    scripts: [breadcrumbSchema("Get Involved", PATH)],
   }),
 });
 

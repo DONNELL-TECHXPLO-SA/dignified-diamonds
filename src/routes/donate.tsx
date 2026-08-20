@@ -5,7 +5,9 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
 import { PageHero } from "@/components/PageHero";
 import { DONATE_OPTIONS } from "@/lib/site-data";
+import { pageMeta, pageLinks, breadcrumbSchema } from "@/lib/seo";
 
+const PATH = "/donate";
 const TITLE = "Donate | Support Dignified Diamonds";
 const DESCRIPTION =
   "Support Dignified Diamonds by donating products, making a financial contribution, or partnering through corporate sponsorship.";
@@ -13,14 +15,9 @@ const DESCRIPTION =
 export const Route = createFileRoute("/donate")({
   component: DonatePage,
   head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-      { property: "og:url", content: "/donate" },
-    ],
-    links: [{ rel: "canonical", href: "/donate" }],
+    meta: pageMeta({ title: TITLE, description: DESCRIPTION, path: PATH }),
+    links: pageLinks(PATH),
+    scripts: [breadcrumbSchema("Donate", PATH)],
   }),
 });
 
