@@ -9,10 +9,6 @@ import {
   Buildings,
   Recycle,
   CurrencyCircleDollar,
-  ShieldCheck,
-  FileText,
-  Bank,
-  Scroll,
   HandCoins,
 } from "@phosphor-icons/react";
 
@@ -158,15 +154,6 @@ export const DONATE_OPTIONS = [
     body: "Support Dignified Diamonds through a larger sponsorship or ongoing partnership as a business or organisation.",
     cta: "Enquire About Sponsorship",
   },
-] as const;
-
-export const TRUST_ITEMS = [
-  { icon: Bank, label: "Registration Information" },
-  { icon: FileText, label: "Annual Reports" },
-  { icon: Scroll, label: "Impact Reports" },
-  { icon: CurrencyCircleDollar, label: "Financial Information" },
-  { icon: Handshake, label: "Partner Information" },
-  { icon: ShieldCheck, label: "Policies" },
 ] as const;
 
 export const FAQS = [

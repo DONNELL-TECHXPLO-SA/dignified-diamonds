@@ -6,7 +6,6 @@ import { Reveal } from "@/components/Reveal";
 import { PageHero } from "@/components/PageHero";
 import { DiamondMark } from "@/components/DiamondMark";
 import { FounderPortrait } from "@/components/FounderPortrait";
-import { TrustSection } from "@/components/TrustSection";
 import { pageMeta, pageLinks, breadcrumbSchema } from "@/lib/seo";
 
 const PATH = "/about";
@@ -98,8 +97,6 @@ function AboutPage() {
             </div>
           </div>
         </section>
-
-        <TrustSection />
 
         {/* CTA */}
         <section className="py-16 sm:py-24">
