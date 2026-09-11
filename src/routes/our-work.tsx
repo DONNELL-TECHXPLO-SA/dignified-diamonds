@@ -5,6 +5,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
 import { PageHero } from "@/components/PageHero";
 import { FAQSection } from "@/components/FAQSection";
+import { WorkGallery } from "@/components/WorkGallery";
 import { OUR_WORK_PROGRAMS } from "@/lib/site-data";
 import { pageMeta, pageLinks, breadcrumbSchema } from "@/lib/seo";
 
@@ -61,6 +62,22 @@ function OurWorkPage() {
                 </Reveal>
               ))}
             </ul>
+          </div>
+        </section>
+
+        {/* GALLERY */}
+        <section id="gallery" className="bg-cream py-16 sm:py-24">
+          <div className="mx-auto max-w-6xl px-5 sm:px-8">
+            <Reveal className="max-w-2xl">
+              <h2 className="text-3xl text-primary sm:text-4xl">Our Work in Pictures</h2>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                Real moments from outreach days, school handovers and community drives across the
+                country.
+              </p>
+            </Reveal>
+            <div className="mt-10">
+              <WorkGallery />
+            </div>
           </div>
         </section>
 

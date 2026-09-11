@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { List, X } from "@phosphor-icons/react";
-import { DiamondMark } from "./DiamondMark";
+import { Logo } from "./Logo";
 import { NAV_LINKS } from "@/lib/site-data";
 
 export function SiteNav() {
@@ -42,11 +42,12 @@ export function SiteNav() {
         aria-label="Main"
         className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 sm:px-8"
       >
-        <Link to="/" className="flex items-center gap-2.5 text-primary">
-          <DiamondMark className="h-7 w-7 text-champagne-foreground" />
-          <span className="font-display text-lg font-semibold tracking-tight sm:text-xl">
-            Dignified Diamonds
-          </span>
+        <Link to="/" className="flex items-center">
+          <Logo
+            className={`w-auto transition-all duration-300 ${
+              scrolled ? "h-10 sm:h-12" : "h-14 sm:h-16"
+            }`}
+          />
         </Link>
 
         <ul className="hidden items-center gap-7 md:flex">

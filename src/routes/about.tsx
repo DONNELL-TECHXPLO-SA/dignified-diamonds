@@ -40,10 +40,16 @@ function AboutPage() {
             <Reveal>
               <h2 className="text-3xl text-primary sm:text-4xl">Our Story</h2>
               <p className="mt-5 leading-relaxed text-muted-foreground sm:text-lg">
-                Dignified Diamonds was founded in 2020 by Ayesha Cassim while she was a Grade 11
-                learner at Hoërskool Lydenburg. What began as an effort to support girls who
-                struggled to access female hygiene products grew into a wider initiative focused on
-                menstrual hygiene, dignity and access.
+                Dignified Diamonds started in 2020 as a small school outreach project led by Ayesha
+                Cassim, then a Grade 11 learner at Hoërskool Lydenburg. The first outreach was fully
+                sponsored, and the funds raised were carried forward to the next school in line.
+              </p>
+              <p className="mt-4 leading-relaxed text-muted-foreground sm:text-lg">
+                Then the KZN riots hit, and those funds went instead to women and girls in distress.
+                There was never a plan to keep going — but afterwards it was clear this was a
+                continuous need that women rarely speak about. What started as a single school
+                project grew into a wider initiative focused on menstrual hygiene, dignity and
+                access, built on a simple belief: confidence breeds beauty.
               </p>
             </Reveal>
           </div>
