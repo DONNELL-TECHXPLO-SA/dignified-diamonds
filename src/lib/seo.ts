@@ -23,7 +23,7 @@ export const OG_IMAGE = {
   url: absoluteUrl(heroImage),
   width: 1600,
   height: 1200,
-  alt: "Confident young South African schoolgirls smiling together on their school grounds",
+  alt: "SuperSpar store staff holding up Dignified Diamonds tote bags next to a Sanitary Pad Drive donation bin",
 } as const;
 
 /**

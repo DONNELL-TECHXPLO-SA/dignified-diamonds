@@ -81,7 +81,7 @@ function Index() {
                 width={1600}
                 height={1200}
                 fetchPriority="high"
-                alt="Confident young South African schoolgirls smiling together on their school grounds"
+                alt="SuperSpar store staff holding up Dignified Diamonds tote bags next to a Sanitary Pad Drive donation bin"
                 className="relative w-full rounded-[2rem] object-cover shadow-lift"
               />
             </Reveal>
@@ -97,17 +97,18 @@ function Index() {
                 width={1200}
                 height={1200}
                 loading="lazy"
-                alt="A young volunteer packing hygiene care packs for girls"
+                alt="Founder Ayesha Cassim with schoolgirls holding Dignified Diamonds care packs"
                 className="w-full rounded-[2rem] object-cover shadow-soft"
               />
             </Reveal>
             <Reveal delay={100} className="order-1 lg:order-2">
               <h2 className="text-3xl text-primary sm:text-4xl">Our Story</h2>
               <p className="mt-5 leading-relaxed text-muted-foreground">
-                Dignified Diamonds was founded in 2020 by Ayesha Cassim while she was a Grade 11
-                learner at Hoërskool Lydenburg. What began as a desire to support girls who
-                struggled to access female hygiene products grew into a wider community initiative
-                supporting girls with essential menstrual hygiene products and care packs.
+                Dignified Diamonds started in 2020 as a small school outreach project led by Ayesha
+                Cassim, then a Grade 11 learner at Hoërskool Lydenburg. What began with one fully
+                sponsored school donation grew into something bigger when the KZN riots hit — the
+                team turned their next round of collected funds toward women and girls in distress,
+                and realised this was a need that never really goes away.
               </p>
               <p className="mt-4 leading-relaxed text-muted-foreground">
                 Our work is built around a simple belief: no girl should have to compromise her
@@ -116,7 +117,7 @@ function Index() {
               </p>
               <blockquote className="mt-8 flex items-center gap-4 rounded-2xl border border-champagne/70 bg-cream px-6 py-5">
                 <DiamondMark className="h-8 w-8 shrink-0 text-champagne-foreground" />
-                <p className="font-display text-xl text-primary">Every girl deserves dignity.</p>
+                <p className="font-display text-xl text-primary">Confidence breeds beauty.</p>
               </blockquote>
               <Link
                 to="/about"

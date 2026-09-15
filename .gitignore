@@ -20,6 +20,9 @@ dist-ssr
 .wrangler/
 .dev.vars
 
+# Unused raw photo exports (real copies live under gallery-*.jpg / hero.jpg)
+src/assets/WhatsApp Image*.jpeg
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

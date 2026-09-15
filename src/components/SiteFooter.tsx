@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { DiamondMark } from "./DiamondMark";
+import { Logo } from "./Logo";
 import { SocialLinks } from "./SocialLinks";
 import { NAV_LINKS, CONTACT_INFO } from "@/lib/site-data";
 
@@ -11,9 +11,8 @@ export function SiteFooter() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           <div className="max-w-xs">
-            <Link to="/" className="flex items-center gap-2.5 text-primary">
-              <DiamondMark className="h-7 w-7 text-champagne-foreground" />
-              <span className="font-display text-lg font-semibold">Dignified Diamonds</span>
+            <Link to="/" className="flex items-center">
+              <Logo className="h-16 w-auto" />
             </Link>
             <p className="mt-2 text-sm text-muted-foreground">
               Restoring Dignity. Empowering Girls.
